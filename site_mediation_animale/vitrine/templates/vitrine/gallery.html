@@ -1,0 +1,15 @@
+{% extends "vitrine/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>Galerie de Médiation Animale</h2>
+<div class="gallery">
+    <img src="{% static 'vitrine/img/chien1.jpg' %}" alt="Chien1">
+    <img src="{% static 'vitrine/img/chien2.jpg' %}" alt="Chien2">
+    <img src="{% static 'vitrine/img/chien3.jpg' %}" alt="Chien3">
+</div>
+
+<!-- Inclure les fichiers CSS et JS -->
+<link rel="stylesheet" href="{% static 'vitrine/css/styles.css' %}">
+<script src="{% static 'vitrine/js/gallery.js' %}"></script>
+{% endblock %}

@@ -1,16 +1,21 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
+# Vue pour la page d'accueil
 def home(request):
-    return HttpResponse("Bienvenue sur la page d'accueil du site de médiation animale.")
+    return render(request, 'vitrine/home.html')
 
+# Vue pour la page "À propos"
 def about(request):
-    return HttpResponse("À propos de Ludivine et de son parcours.")
+    return render(request, 'vitrine/about.html')
 
+# Vue pour la page des services
 def services(request):
-    return HttpResponse("Les services proposés : ateliers, médiation animale, etc.")
+    return render(request, 'vitrine/services.html')
 
+# Vue pour la galerie
 def gallery(request):
-    return HttpResponse("Galerie de photos des activités de médiation animale.")
+    return render(request, 'vitrine/gallery.html')
 
+# Vue pour la page de contact
 def contact(request):
-    return HttpResponse("Page de contact pour joindre Ludivine.")
+    return render(request, 'vitrine/contact.html')

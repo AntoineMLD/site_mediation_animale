@@ -55,7 +55,7 @@ ROOT_URLCONF = 'site_mediation_animale.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'vitrine/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +70,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'site_mediation_animale.wsgi.application'
 
+STATIC_URL = '/static/' 
 
+STATICFILES_DIRS = [
+    BASE_DIR / "vitrine/static",  
+]
+
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
