@@ -2,14 +2,34 @@
 {% load static %}
 
 {% block content %}
-<h2>Galerie de Médiation Animale</h2>
-<div class="gallery">
-    <img src="{% static 'vitrine/img/chien1.jpg' %}" alt="Chien1">
-    <img src="{% static 'vitrine/img/chien2.jpg' %}" alt="Chien2">
-    <img src="{% static 'vitrine/img/chien3.jpg' %}" alt="Chien3">
+<h2>Galerie</h2>
+
+<!-- Carrousel Bootstrap -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'vitrine/img/chien1.jpg' %}" class="d-block w-100" alt="Chien 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'vitrine/img/chien2.jpg' %}" class="d-block w-100" alt="Chien 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'vitrine/img/chien3.jpg' %}" class="d-block w-100" alt="Chien 3">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Précédent</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Suivant</span>
+  </a>
 </div>
 
-<!-- Inclure les fichiers CSS et JS -->
-<link rel="stylesheet" href="{% static 'vitrine/css/styles.css' %}">
-<script src="{% static 'vitrine/js/gallery.js' %}"></script>
 {% endblock %}

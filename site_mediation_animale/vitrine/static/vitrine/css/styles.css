@@ -1,0 +1,13 @@
+/* Limite la largeur du carrousel */
+#carouselExampleIndicators {
+    max-width: 900px; /* Taille maximale du carrousel */
+    margin: 0 auto; /* Centrer le carrousel */
+}
+
+/* Ajuste la taille des images pour qu'elles ne prennent pas toute la hauteur de la page */
+.carousel-item img {
+    object-fit: contain; /* Assure que l'image est redimensionnée sans coupures */
+    width: 100%; /* Occupe toute la largeur du carrousel */
+    height: 400px; /* Fixe la hauteur des images */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
